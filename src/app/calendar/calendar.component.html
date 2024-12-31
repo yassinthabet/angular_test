@@ -1,0 +1,30 @@
+<!--
+<div class="calendar-container">
+    <h3>Calendrier d'Irrigation</h3>
+    <button class="btn btn-primary mb-3" (click)="addTask()">Ajouter une tâche</button>
+    
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Tâche</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks">
+          <td>{{ task.date }}</td>
+          <td>{{ task.task }}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div *ngIf="tasks.length === 0" class="no-tasks">
+      <p>Aucune tâche ajoutée pour l'instant.</p>
+    </div>
+  </div>
+  -->
+  <div class="calendar-container">
+    <button class="btn btn-add-task mb-3" (click)="addTask()">Ajouter une tâche</button>
+    <full-calendar [options]="calendarOptions"></full-calendar>
+  </div>
+  

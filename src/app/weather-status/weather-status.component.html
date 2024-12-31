@@ -1,0 +1,29 @@
+
+<div class="weather-status">
+  <!-- Weather Banner -->
+  <div class="weather-banner row align-items-center">
+    <div class="col-8 col-md-10 weather-info d-flex">
+      <i class="fas fa-sun weather-icon"></i>
+      <div class="weather-details">
+        <h3 class="date">Lundi, 31 Décembre</h3>
+        <p class="condition">Ensoleillé</p>
+        <p class="temperature">Température : 25°C</p>
+      </div>
+    </div>
+    <div class="col-4 col-md-2 text-right">
+      <button class="dismiss-btn">×</button>
+    </div>
+  </div>
+
+  <!-- Weather Container -->
+  <div class="weather-container row">
+    <div class="col-12 col-sm-6 col-md-4" *ngFor="let farm of farms">
+      <div class="card">
+        <h3>{{ farm.name }}</h3>
+        <p><i class="fas fa-tint"></i> <strong>Humidité:</strong> {{ farm.humidity }}%</p>
+        <p><i class="fas fa-thermometer-half"></i> <strong>Température:</strong> {{ farm.temperature }}°C</p>
+        <p><i class="fas fa-cloud"></i> <strong>Météo:</strong> {{ farm.weatherStatus }}</p>
+      </div>
+    </div>
+  </div>
+</div>

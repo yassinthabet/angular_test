@@ -1,0 +1,105 @@
+
+.card i {
+    color: #388e3c; 
+    margin-right: 10px; 
+    font-size: 1.3rem; 
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+
+.card h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
+    color: #388e3c;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+
+.card p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #424242;
+    margin: 10px 0;
+    line-height: 1.5;
+    font-weight: 400;
+    
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.4rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .card button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.8rem;
+    }
+
+    .card button {
+        font-size: 0.8rem;
+        padding: 8px 18px;
+    }
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.row .card {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+    .row .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .row .card {
+        flex: 1 1 100%;
+    }
+}

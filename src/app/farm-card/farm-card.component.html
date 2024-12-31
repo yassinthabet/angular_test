@@ -1,0 +1,16 @@
+
+  <div class="container">
+    <div class="row justify-content-center">
+        <div *ngIf="farm" class="card p-4">
+            <h3>{{ farm.name }}</h3>
+            <p><i class="fas fa-tint"></i> <strong>Humidité:</strong> {{ farm.humidity }}%</p>
+            <p><i class="fas fa-thermometer-half"></i> <strong>Température:</strong> {{ farm.temperature }}°C</p>
+            <p><i class="fas fa-plug"></i> <strong>Valves connectées:</strong> {{ farm.connectedValves }}/{{ farm.totalValves }}</p>
+            <p><i class="fas fa-cloud-sun"></i> <strong>Météo:</strong> {{ farm.weatherStatus }}</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Emplacement:</strong> {{ farm.location }}</p>
+            
+        </div>
+    </div>
+</div>
+
+  

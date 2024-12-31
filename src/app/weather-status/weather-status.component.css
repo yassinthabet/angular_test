@@ -1,0 +1,161 @@
+
+.weather-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  margin-left: 300px;
+  transition: margin-left 0.3s ease;
+  overflow-x: hidden;
+  overflow-y: auto;
+  top: 0;
+  margin-top: 0;
+}
+
+.weather-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  width: 100%;
+}
+
+.card {
+  background: linear-gradient(135deg, #f0f4ff, #dbe7ff);
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #34495e;
+  display: flex;
+  align-items: center;
+}
+
+.card p i {
+  margin-right: 8px;
+  color: #3498db;
+  font-size: 1.2rem;
+}
+
+
+.weather-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3498db;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+}
+
+.weather-icon {
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+.weather-details {
+  font-size: 1rem;
+}
+
+.weather-details h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.weather-details p {
+  margin: 5px 0;
+}
+
+.dismiss-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* --- Responsivité pour mobile --- */
+@media (max-width: 768px) {
+  .weather-status {
+    margin-left: 0; 
+    padding: 10px;
+    margin-top: 50px;
+    position: absolute;
+  }
+
+  .weather-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dismiss-btn {
+    position: relative;
+    top: 0;
+    right: 0;
+    font-size: 1.2rem;
+  }
+
+  .weather-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .weather-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .weather-details h3 {
+    font-size: 1rem;
+  }
+
+  .weather-details p {
+    font-size: 0.9rem;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,39 @@
+
+<div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <aside 
+        class="sidebar collapse d-flex flex-column bg-light vh-100"
+        [class.sidebar-mobile]="isMobile"
+        [class.open]="isSidebarOpen && isMobile"
+      >
+        <!-- Logo -->
+        <div class="logo-container">
+          <img src="assets/smart-farm.png" alt="Smart Farms Logo" class="logo">
+        </div>
+        <h3>Smart Farms</h3>
+        <ul class="flex-column">
+          <li><a class="nav-link active" routerLink="/dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li><a class="nav-link" routerLink="/farms"><i class="fas fa-seedling"></i> Gestion des fermes</a></li>
+          <li><a class="nav-link" routerLink="/"><i class="fas fa-microchip"></i>Données des capteurs</a></li>
+          <li><a class="nav-link" routerLink="/weather"><i class="fas fa-cloud-sun"></i> Rapports météo</a></li>
+          <li><a class="nav-link" routerLink="/calendar"><i class="fas fa-calendar-alt"></i> Calendrier d'irrigation</a></li>
+          <li><a class="nav-link" routerLink="/"><i class="fas fa-cogs"></i> Paramètres utilisateur</a></li>
+        </ul>
+      </aside>
+  
+      <!-- Menu Toggle Button (Visible only on mobile) -->
+      <div class="col">
+        <button
+          class="btn toggle-btn"
+          (click)="toggleSidebar()"
+          *ngIf="isMobile"
+          aria-label="Toggle navigation"
+          [attr.aria-expanded]="isSidebarOpen"
+        >
+          ☰
+        </button>
+      </div>
+    </div>
+  </div>
+  
